@@ -1,0 +1,13 @@
+<!-- importing code from our base template -->
+{% extends 'base.html' %}
+
+<!-- if we wish to add some code to our head (from base-template) we can..
+     call the block head and put into it our code such as.. -->
+{% bloc head %}
+    <!-- and the code goes here.. -->
+{% endblock head %}
+
+<!-- adding some extra code to our body (from base-template) -->
+{% block content %}
+    <h1>Hello World..</h1>
+{% endblock content %}
