@@ -1,0 +1,75 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family; 'Abel', sans-serif;
+  overflow-wrap: break-word;
+}
+
+.nb{
+  margin-bottom: 50px;
+}
+
+.brand-img {
+  height: 50px;
+  -webkit-transition: height .5s;
+  transition: height .5s;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.brand-img:hover{
+  padding: 1px;
+}
+
+.overview{
+  width: 350px;
+  height: 400px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: gray;
+  box-shadow: 5px 5px 5px rgba(100, 100, 100);
+}
+
+.endpoint{
+  background-color: #E5E5E5;
+  padding: 5px;
+  border-radius: 3px;
+  color: black;
+}
+
+.json{
+  background-color: white;
+  padding: 5px;
+  color: gray;
+  width: auto;
+  margin-top: 10px;
+  border-radius: 3px;
+}
+
+.ft{
+  text-align: center;
+  font-size: 8pt;
+  padding: 5px;
+  margin-top: 50px;
+}
+
+.cd{
+  box-shadow: 5px 5px 5px rgba(100, 100, 100);
+}
+
+.container{
+  margin: auto;
+  border-radius: 5px;
+  padding: 50px;
+}
+
+.fm{
+  border-width: 1px;
+  border-color: black;
+  padding: 20px;
+}
