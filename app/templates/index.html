@@ -60,7 +60,7 @@ with the data <b>ENCRYPTED</b> or <b>DECRYPTED</b>, as is shown in the boxes <a 
         </div>
         <div class="list-group-item list-group-item-primary">
             <h3>Or just, fill the form bellow:</h3>
-            <form class="fm" method="post" action="{{ url_for('routes.encrypt') }}">
+            <form class="fm" method="post" action="{{ url_for('encrypt') }}">
                 <div class="form-group">
                     <label for="textEncrypt"><b>Text to Encrypt</b></label>
                     <input type="text" class="form-control mb-2" id="textEncrypt" name="text"
@@ -90,7 +90,7 @@ with the data <b>ENCRYPTED</b> or <b>DECRYPTED</b>, as is shown in the boxes <a 
         </div>
         <div class="list-group-item list-group-item-primary">
             <h3>Or just, fill the form bellow:</h3>
-            <form class="fm" method="post" action="{{ url_for('routes.decrypt') }}">
+            <form class="fm" method="post" action="{{ url_for('decrypt') }}">
                 <div class="form-group">
                     <label for="value1"><b>First Value</b></label>
                     <input type="text" class="form-control mb-2" id="value1" name="value1"
