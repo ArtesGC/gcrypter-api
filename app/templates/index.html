@@ -1,13 +1,115 @@
 <!-- importing code from our base template -->
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
-<!-- if we wish to add some code to our head (from base-template) we can..
-     call the block head and put into it our code such as.. -->
-{% bloc head %}
-    <!-- and the code goes here.. -->
+<!-- if we wish to add some code to our head (from base-template) we can...
+     call the block head and put into it our code such as... -->
+{% block head %}
+<!-- and the code goes here... -->
 {% endblock head %}
 
 <!-- adding some extra code to our body (from base-template) -->
 {% block content %}
-    <h1>Hello World..</h1>
+<div class="cd card">
+    <h2 class="card-header text-center">Intro</h2>
+    <div class="card-body">
+        <pre class="card-text">
+GCrypter-API
+It's a web version of the desktop program <a href="https://sourceforge.net/p/gcrypter/">GCrypter</a>
+
+- This API offers you options and a simple environment
+to you as an end user to be able to ENCRYPT your text or message easily.
+- And an option for DECRYPT the same data.
+
+After the encryption will be returned to you a json response
+with the data <b>ENCRYPTED</b> or <b>DECRYPTED</b>, as is shown in the boxes <a href="#encrypt-card">bellow</a>.
+        </pre><hr>
+        <h3>A simple overview of the GCrypter-desktop:</h3>
+        <ul class="list-inline text-center">
+            <li class="list-inline-item list-inline-item-primary">
+                <img class="overview" src="{{ url_for('static', filename='img/demos/intro.png') }}">
+            </li>
+            <li class="list-inline-item list-inline-item-primary">
+                <img class="overview" src="{{ url_for('static', filename='img/demos/login.png') }}">
+            </li>
+            <li class="list-inline-item list-inline-item-primary">
+                <img class="overview" src="{{ url_for('static', filename='img/demos/welcomepage.png') }}">
+            </li>
+        </ul>
+        <a class="btn btn-secondary" href="https://sourceforge.net/p/gcrypter/">Download Here...</a>
+    </div>
+</div>
+<br>
+<div id="encrypt-card" class="cd card">
+    <h2 class="card-header text-center">Encrypting some text:</h2>
+    <div class="list-group list-group-flush">
+        <div class="list-group-item list-group-item-primary">
+            <b>URL:</b>
+            <code class="endpoint">
+                https://gcrypter.herokuapp.com/encrypt/?text=[message_goes_here]
+            </code>
+            <pre class="json">
+// GET: /encrypt/?text=amor
+
+{
+  "encrypted": [
+    1266033467,
+    706432073
+  ]
+}
+        </pre>
+        </div>
+        <div class="list-group-item list-group-item-primary">
+            <h3>Or just, fill the form bellow:</h3>
+            <form class="fm" method="post" action="{{ url_for('routes.encrypt') }}">
+                <div class="form-group">
+                    <label for="textEncrypt"><b>Text to Encrypt</b></label>
+                    <input type="text" class="form-control mb-2" id="textEncrypt" name="text"
+                           placeholder="Type anything you'd like to encrypt...">
+                    <button type="submit" class="btn btn-secondary mb-2">Encrypt</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<br>
+<div class="cd card">
+    <h2 class="card-header text-center">Decrypting some text:</h2>
+    <div class="list-group list-group-flush">
+        <div class="list-group-item list-group-item-primary">
+            <b>URL:</b>
+            <code class="endpoint">
+                https://gcrypter.herokuapp.com/decrypt/?value1=[first_value_goes_here]&value2=[second_value_goes_here]
+            </code>
+            <pre class="json">
+// GET: /decrypt/?value1=1266033467&value2=706432073
+
+{
+  "decrypted": "amor"
+}
+            </pre>
+        </div>
+        <div class="list-group-item list-group-item-primary">
+            <h3>Or just, fill the form bellow:</h3>
+            <form class="fm" method="post" action="{{ url_for('routes.decrypt') }}">
+                <div class="form-group">
+                    <label for="value1"><b>First Value</b></label>
+                    <input type="text" class="form-control mb-2" id="value1" name="value1"
+                           placeholder="Insert the first value..." aria-describedby="value1HelpBlock">
+                    <small id="value1HelpBlock" class="form-text text-muted">
+                        This is the first number returned on the encrypted json of the data!
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label for="value2"><b>Second Value</b></label>
+                    <input type="text" class="form-control mb-2" id="value2" name="value2"
+                           placeholder="Insert the second value..." aria-describedby="value2HelpBlock">
+                    <small id="value2HelpBlock" class="form-text text-muted">
+                        This is the second number returned on the encrypted json of the data!
+                    </small>
+                </div>
+                <button type="submit" class="btn btn-secondary mb-2">Decrypt</button>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock content %}
