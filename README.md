@@ -1,6 +1,12 @@
-# flask-default
+# ![gc-logo](app/static/img/favicon/favicon-192x192.png)
 
-    default structure to build a blog with flask
+## GCrypter-API
+
+It's a web version of the desktop program [GCrypter](https://sourceforge.net/p/gcrypter/)
+
+- This API offers you options and a simple environment
+to you as an end user be able to ENCRYPT your text or message easily.
+- And an option for DECRYPT the same data.
 
 ---
 
