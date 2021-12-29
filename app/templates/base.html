@@ -8,7 +8,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel&display=swap">
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
@@ -27,10 +27,18 @@
         type="image/x-icon">
     <link rel="manifest" href="{{ url_for('static', filename='img/favicon/site.webmanifest') }}">
 
+    <style>
+        body{
+          font-family; 'Abel', sans-serif;
+          overflow-wrap: break-word;
+          background-color: black;
+          color: green;
+        }
+    </style>
     <!-- here goes all head extra code from other pages -->
     {% block head %}{% endblock head %}
 </head>
-<body style="background-color:black;">
+<body>
     <header class="nb navbar navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ url_for('index') }}">
@@ -38,14 +46,15 @@
                      alt="gcrypter-logo" class="brand-img">
             </a>
 
-            <h1 class="nav-item">GCrypter-API</h1>
+            <h1 class="nav-item" style="color:green;">GCrypter-API</h1>
         </div>
     </header>
 
     <!-- here goes all body-content from other pages -->
-    <div class="container bg-light">
+    <div class="container">
     {% block content %}{% endblock content %}
     </div>
+
     <footer class="ft bg-light">&copy; 2021 ArtesGC-DevSoft</footer>
 </body>
 </html>
