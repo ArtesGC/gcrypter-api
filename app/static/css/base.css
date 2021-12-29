@@ -5,11 +5,6 @@
   padding: 0;
 }
 
-body{
-  font-family; 'Abel', sans-serif;
-  overflow-wrap: break-word;
-}
-
 .nb{
   margin-bottom: 50px;
 }
@@ -26,13 +21,54 @@ body{
   padding: 1px;
 }
 
-.overview{
-  width: 350px;
-  height: 400px;
+.overview1{
+  width: 150px;
+  height: 200px;
   padding: 10px;
   border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
   background-color: gray;
   box-shadow: 5px 5px 5px rgba(100, 100, 100);
+}
+.overview1:hover{
+  width: 200px;
+  height: 250px;
+}
+
+.overview2{
+  width: 250px;
+  height: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  background-color: gray;
+  box-shadow: 5px 5px 5px rgba(100, 100, 100);
+}
+
+.overview2:hover{
+  width: 300px;
+  height: 250px;
+}
+
+.overview3{
+  width: 250px;
+  height: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  background-color: gray;
+  box-shadow: 5px 5px 5px rgba(100, 100, 100);
+}
+
+.overview3:hover{
+  width: 300px;
+  height: 250px;
 }
 
 .endpoint{
@@ -49,6 +85,7 @@ body{
   width: auto;
   margin-top: 10px;
   border-radius: 3px;
+  box-shadow: 5px 5px 5px rgba(100, 100, 100);
 }
 
 .ft{
@@ -59,6 +96,7 @@ body{
 }
 
 .cd{
+  padding: 10px;
   box-shadow: 5px 5px 5px rgba(100, 100, 100);
 }
 
@@ -70,6 +108,19 @@ body{
 
 .fm{
   border-width: 1px;
+  border-style: solid;
   border-color: black;
+  border-radius: 3px;
   padding: 20px;
+  margin-bottom: 10px;
+  box-shadow: 5px 5px 5px rgba(100, 100, 100);
+}
+
+.lg{
+  color: green;
+  background-color: #C6C8CA;
+}
+
+.tb{
+  margin-bottom: 10px;
 }
