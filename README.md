@@ -1,6 +1,6 @@
 <div align="center">
 
-![gc-logo](https://github.com/ArtesGC/gcrypter-api/raw/main/app/static/img/favicon/favicon-192x192.png) \
+![gc-logo](app/static/img/favicon/favicon-192x192.png) \
 ![Github license](https://img.shields.io/github/license/ArtesGC/gcrypter-api?style=social) 
 ![GitHub all releases](https://img.shields.io/github/downloads/ArtesGC/gcrypter-api/total?style=social) \
 ![GitHub issues](https://img.shields.io/github/issues/ArtesGC/gcrypter-api?style=social)
