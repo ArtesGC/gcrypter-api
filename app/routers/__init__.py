@@ -40,3 +40,8 @@ def decryption():
         value2 = int(values['value2'])
         return jsonify(decrypted=decrypt(text_enc=(value1, value2)))
     return redirect(url_for('index'))
+
+
+@app.route("/about/", methods=['GET'])
+def about():
+    return render_template("sobre.html")
