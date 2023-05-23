@@ -92,7 +92,7 @@
   text-align: center;
   font-size: 8pt;
   padding: 5px;
-  margin-top: 50px;
+  margin: auto;
 }
 
 .cd{
@@ -101,7 +101,7 @@
 }
 
 .container{
-  margin: auto;
+  margin: 5px;
   border-radius: 5px;
   padding: 50px;
 }
